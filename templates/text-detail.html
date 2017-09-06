@@ -1,0 +1,43 @@
+<ion-view view-title="{{title}}" id="sentences">
+  <ion-content>
+    <h1 class="padding">
+      {{title}}
+    </h1>
+
+    <ion-list>
+
+      <div class="item item-divider">
+        控制
+      </div>
+      <div class="item item-toggle">
+        自动播放
+        <label class="toggle toggle-positive">
+          <input type="checkbox" ng-model="control.autoPlay">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+
+      <div class="item item-divider">
+        句子
+      </div>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="sentence in sentences" type="item-text-wrap" ng-click="play(sentence.sentenceId)">
+        <p>{{sentence.sentenceRole}}:</p>
+        <h2>
+          {{sentence.sentencePy}}<br/>
+          {{sentence.sentenceCh}}
+        </h2>
+        <i ng-class="['icon', {'ion-ios-chatbubble': sentence.playing}, {'ion-ios-chatbubble-outline': !sentence.playing}]"></i>
+        <audio id="record_{{sentence.sentenceId}}" preload>
+          <source ng-src="{{sentence.mp3}}" type="audio/mpeg">
+        </audio>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

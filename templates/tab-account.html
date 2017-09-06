@@ -1,0 +1,28 @@
+<ion-view view-title="设定">
+  <ion-content>
+    <ion-list>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          自动播放句子重复（次）
+        </div>
+        <select ng-model="settings.repeat">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          自动播放间隔（秒）
+        </div>
+        <select ng-model="settings.timeout">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </label>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,7 @@
+/* Empty. Add your own CSS if you like */
+#sentences .item, #sentences .item h1, #sentences .item h2, #sentences .item h3, #sentences .item h4, #sentences .item h5, #sentences .item h6, #sentences .item p, #sentences .item-content, #sentences .item-content h1, #sentences .item-content h2, #sentences .item-content h3, #sentences .item-content h4, #sentences .item-content h5, #sentences .item-content h6, #sentences .item-content p {
+  line-height: 160%;
+  overflow: visible;
+  text-overflow: none;
+  white-space: normal;
+}
