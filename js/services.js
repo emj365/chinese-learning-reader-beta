@@ -37,7 +37,7 @@ angular.module('starter.services', [])
       return text.textId == textId && text.textPart == textPart
     })
     sentences.map(function (s) {
-      s.mp3 = '/mp3/' + s.textId + '_' +
+      s.mp3 = 'mp3/' + s.textId + '_' +
         s.textPart + '_' + s.sentenceId + '.mp3'
       $sce.trustAsResourceUrl(s.mp3)
       return s
